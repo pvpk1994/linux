@@ -3666,6 +3666,7 @@ bool zone_watermark_ok(struct zone *z, unsigned int order, unsigned long mark,
 	return __zone_watermark_ok(z, order, mark, highest_zoneidx, alloc_flags,
 					zone_page_state(z, NR_FREE_PAGES));
 }
+EXPORT_SYMBOL_GPL(zone_watermark_ok);
 
 static inline bool zone_watermark_fast(struct zone *z, unsigned int order,
 				unsigned long mark, int highest_zoneidx,
